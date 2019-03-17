@@ -10,6 +10,6 @@ class Aluno{
 
     recuperarMedia(){
         var notas = this._notas;
-        return blg.calculaMedia(...notas);
+        return blg.calcularMedia(...notas);
     }
 }
