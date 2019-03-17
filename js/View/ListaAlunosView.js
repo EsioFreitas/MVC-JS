@@ -7,7 +7,7 @@ class ListaAlunosView{
         return `
             ${model.lista.map( aluno => `
                 <tr class="aluno" >
-                    <td class="aluno-nome">Gertrude</td>
+                    <td class="aluno-nome">${aluno.nome}</td>
                     <td class="aluno-n1">10</td>
                     <td class="aluno-n2">8.5</td>
                     <td class="aluno-n3">9</td>
@@ -16,5 +16,9 @@ class ListaAlunosView{
                 </tr>
             `)}
         `
+    }
+
+    atualiza(model){
+        this.$selector.innerHTML = this.getTemplate(model); 
     }
 }
