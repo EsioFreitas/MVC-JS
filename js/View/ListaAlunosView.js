@@ -6,7 +6,7 @@ class ListaAlunosView{
     getTemplate(model){
         return `
             ${model.lista.map( aluno => `
-                <tr class="aluno" >
+                <tr class="aluno" data-id="${aluno._id}">
                     <td class="aluno-nome">${aluno.nome}</td>
                     ${aluno._notas.map((nota, i)=> `
                         <td class="aluno-n${i+1}">${nota}</td>
@@ -21,3 +21,4 @@ class ListaAlunosView{
         this.$selector.innerHTML = this.getTemplate(model); 
     }
 }
+

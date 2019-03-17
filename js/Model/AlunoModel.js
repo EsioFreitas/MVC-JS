@@ -2,6 +2,7 @@ class Aluno{
     constructor(nome){
         this.nome = nome;
         this._notas = [];
+        this._id = ++Aluno.id;
     }
 
     adicionarNotas(){
@@ -13,3 +14,5 @@ class Aluno{
         return blg.calcularMedia(...notas);
     }
 }
+
+Aluno.id = 0;

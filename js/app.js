@@ -8,5 +8,7 @@ alunos[2].adicionarNotas(4,5,6,10);
 alunos[3].adicionarNotas(10,10,5,2);
 
 var listaAlunos = new ListaAlunos(alunos);
-var view = new ListaAlunosView('#listaAlunos');
-view.atualiza(listaAlunos);
+var listaAlunosView = new ListaAlunosView('#listaAlunos');
+listaAlunosView.atualiza(listaAlunos);
+
+var listaAlunosController = new ListaAlunosController(listaAlunos, listaAlunosView);
