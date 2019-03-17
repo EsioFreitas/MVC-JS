@@ -13,6 +13,10 @@ class Aluno{
         var notas = this._notas;
         return blg.calcularMedia(...notas);
     }
+
+    atualizarNotas(notas){
+        this._notas = [].concat(notas);
+    }
 }
 
 Aluno.id = 0;

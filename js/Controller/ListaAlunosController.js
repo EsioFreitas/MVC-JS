@@ -16,7 +16,16 @@ class ListaAlunosController{
             target = target.parentNode
         }
         
-        console.log(target)
+        if(target){
+            let _id = parseInt(target.getAttribute('data-id'));
+            let _notas = prompt("Digite as novas nota separadas por vírgula:");
+            _notas = _notas.split(',').map(nota => parseInt(nota));
+
+            let aluno = this.model.obterPorId(_id);
+            aluno.atualizarNotas(_notas);
+            
+            this.view.atualiza(this.model)
+        }
     }
 }
 
